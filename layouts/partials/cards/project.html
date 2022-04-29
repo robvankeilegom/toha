@@ -27,6 +27,11 @@
           </div>
         </div>
       </a>
+      {{ if .image }}
+        {{ $image := resources.Get .image }}
+
+        <img class="" src="{{ $image.RelPermalink }}" alt="{{ .name }}" />
+      {{ end }}
       <div class="card-body text-justify pt-1 pb-1">
         <p>{{ .summary | markdownify }}</p>
         <!-- Display project card technology tags -->
