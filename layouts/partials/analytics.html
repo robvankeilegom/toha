@@ -40,6 +40,17 @@
             src="//gc.zgo.at/count.js"
             ></script>
         {{ end }}
+
+        <!-- Umami analytics -->
+        {{ with .umami }}
+        <script
+            async
+            defer
+            data-website-id="{{ .id }}"
+            src="https://analytics.robvankeilegom.be/umami.js"
+        ></script>
+        {{ end }}
+
     {{ end }}
 {{ end }}
 
